@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Transação</title>
+    </head>
+<body>
+    <h1>Editar Transação</h1>
+
+    <form action="<?php echo e(route('transactions.update', $transaction)); ?>" method="POST">
+    <?php echo method_field('PATCH'); ?>
+     <?php echo csrf_field(); ?>
+
+        <div>
+            <label for="description">Descrição:</label><br>
+            <input type="text" id="description" name="description" value="<?php echo e($transaction->description); ?>" required>
+        </div>
+        <br>
+        <div>
+            <label for="amount">Valor (R$):</label><br>
+            <input type="number" id="amount" name="amount" step="0.01" value="<?php echo e($transaction->amount); ?>" required>
+        </div>
+        <br>
+        <div>
+            <label for="type">Tipo:</label><br>
+            <select name="type" id="type" value="<?php echo e($transaction->type); ?>"required>
+                <option value="receita">Receita</option>
+                <option value="despesa">Despesa</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="date">Data:</label><br>
+            <input type="date" id="date" name="date" value="<?php echo e($transaction->date); ?>" required>
+        </div>
+        <br>
+        <button type="submit">Salvar Transação</button>
+    </form>
+</body>
+</html><?php /**PATH /var/www/html/resources/views/transactions/edit.blade.php ENDPATH**/ ?>
