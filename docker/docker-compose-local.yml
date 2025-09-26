@@ -1,0 +1,71 @@
+version: "3"
+
+services:
+  #PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: digitalocean.com/php
+    container_name: sistemafinanceiro-app
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www/app
+    volumes:
+      - ../:/var/www/app
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: sistemafinanceiro-webserver
+    tty: true
+    ports:
+      - "8020:8080"
+      - "447:443"
+    volumes:
+      - ../:/var/www/app
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+  #MySQL Service
+  db:
+    image: mariadb:10.5.8
+    container_name: sistemafinanceiro-db
+    tty: true
+    ports:
+      - "3304:3306"
+    environment:
+      MYSQL_DATABASE: sistemafinanceiro
+      MYSQL_ROOT_PASSWORD: docker123
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ~/docker/sistemafinanceiro/mysql:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+
+  smtp:
+    image: codions/mailcatcher
+    container_name: sistemafinanceiro-smtp
+    ports:
+      - "1025:1025"
+      - "1080:1080"
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
+
+#Volumes
+volumes:
+  dbdata:
+    driver: local
