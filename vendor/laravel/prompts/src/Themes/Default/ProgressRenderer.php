@@ -27,7 +27,11 @@ class ProgressRenderer extends Renderer
                 ->box(
                     $this->dim($this->truncate($progress->label, $progress->terminal()->cols() - 6)),
                     $this->dim($filled),
+<<<<<<< HEAD
                     info: $this->fractionCompleted($progress),
+=======
+                    info: $progress->progress.'/'.$progress->total,
+>>>>>>> dev
                 ),
 
             'error' => $this
@@ -35,7 +39,11 @@ class ProgressRenderer extends Renderer
                     $this->truncate($progress->label, $progress->terminal()->cols() - 6),
                     $this->dim($filled),
                     color: 'red',
+<<<<<<< HEAD
                     info: $this->fractionCompleted($progress),
+=======
+                    info: $progress->progress.'/'.$progress->total,
+>>>>>>> dev
                 ),
 
             'cancel' => $this
@@ -43,7 +51,11 @@ class ProgressRenderer extends Renderer
                     $this->truncate($progress->label, $progress->terminal()->cols() - 6),
                     $this->dim($filled),
                     color: 'red',
+<<<<<<< HEAD
                     info: $this->fractionCompleted($progress),
+=======
+                    info: $progress->progress.'/'.$progress->total,
+>>>>>>> dev
                 )
                 ->error($progress->cancelMessage),
 
@@ -51,7 +63,11 @@ class ProgressRenderer extends Renderer
                 ->box(
                     $this->cyan($this->truncate($progress->label, $progress->terminal()->cols() - 6)),
                     $this->dim($filled),
+<<<<<<< HEAD
                     info: $this->fractionCompleted($progress),
+=======
+                    info: $progress->progress.'/'.$progress->total,
+>>>>>>> dev
                 )
                 ->when(
                     $progress->hint,
@@ -60,6 +76,7 @@ class ProgressRenderer extends Renderer
                 )
         };
     }
+<<<<<<< HEAD
 
     /**
      * @param  Progress<int|iterable<mixed>>  $progress
@@ -68,4 +85,6 @@ class ProgressRenderer extends Renderer
     {
         return number_format($progress->progress).' / '.number_format($progress->total);
     }
+=======
+>>>>>>> dev
 }

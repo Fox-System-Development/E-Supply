@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "88a1aa564698a6ed9447140721d9904e",
+=======
+    "content-hash": "f1fc43835bb4cb97bda824148315c957",
+>>>>>>> dev
     "packages": [
         {
             "name": "myclabs/deep-copy",
@@ -1042,6 +1046,7 @@
         },
         {
             "name": "sebastian/exporter",
+<<<<<<< HEAD
             "version": "6.3.2",
             "source": {
                 "type": "git",
@@ -1052,6 +1057,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/70a298763b40b213ec087c51c739efcaa90bcd74",
                 "reference": "70a298763b40b213ec087c51c739efcaa90bcd74",
+=======
+            "version": "6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/exporter.git",
+                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/3473f61172093b2da7de1fb5782e1f24cc036dc3",
+                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -1065,7 +1082,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "6.3-dev"
+=======
+                    "dev-main": "6.1-dev"
+>>>>>>> dev
                 }
             },
             "autoload": {
@@ -1108,12 +1129,17 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.2"
+=======
+                "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.0"
+>>>>>>> dev
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -1129,6 +1155,11 @@
                 }
             ],
             "time": "2025-09-24T06:12:51+00:00"
+=======
+                }
+            ],
+            "time": "2024-12-05T09:17:50+00:00"
+>>>>>>> dev
         },
         {
             "name": "sebastian/global-state",

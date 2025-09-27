@@ -3,14 +3,20 @@
 namespace Laravel\Sail\Console;
 
 use Illuminate\Console\Command;
+<<<<<<< HEAD
 use Laravel\Sail\Console\Concerns\InteractsWithDockerComposeServices;
+=======
+>>>>>>> dev
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'sail:publish')]
 class PublishCommand extends Command
 {
+<<<<<<< HEAD
     use InteractsWithDockerComposeServices;
 
+=======
+>>>>>>> dev
     /**
      * The name and signature of the console command.
      *
@@ -36,7 +42,11 @@ class PublishCommand extends Command
         $this->call('vendor:publish', ['--tag' => 'sail-database']);
 
         file_put_contents(
+<<<<<<< HEAD
             $this->composePath(),
+=======
+            $this->laravel->basePath('docker-compose.yml'),
+>>>>>>> dev
             str_replace(
                 [
                     './vendor/laravel/sail/runtimes/8.4',
@@ -56,7 +66,11 @@ class PublishCommand extends Command
                     './docker/mysql',
                     './docker/pgsql'
                 ],
+<<<<<<< HEAD
                 file_get_contents($this->composePath())
+=======
+                file_get_contents($this->laravel->basePath('docker-compose.yml'))
+>>>>>>> dev
             )
         );
     }

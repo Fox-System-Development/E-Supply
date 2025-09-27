@@ -230,7 +230,11 @@ class Arr
             return $array->offsetExists($key);
         }
 
+<<<<<<< HEAD
         if (is_float($key) || is_null($key)) {
+=======
+        if (is_float($key)) {
+>>>>>>> dev
             $key = (string) $key;
         }
 

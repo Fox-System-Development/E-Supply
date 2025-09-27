@@ -1346,6 +1346,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v12.31.1",
             "version_normalized": "12.31.1.0",
             "source": {
@@ -1357,6 +1358,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/281b711710c245dd8275d73132e92635be3094df",
                 "reference": "281b711710c245dd8275d73132e92635be3094df",
+=======
+            "version": "v12.30.0",
+            "version_normalized": "12.30.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "943603722fe95b69f216bdcda7d060c9a55f18fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/943603722fe95b69f216bdcda7d060c9a55f18fd",
+                "reference": "943603722fe95b69f216bdcda7d060c9a55f18fd",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -1517,7 +1531,11 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.2).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.2)."
             },
+<<<<<<< HEAD
             "time": "2025-09-23T15:33:04+00:00",
+=======
+            "time": "2025-09-18T15:10:15+00:00",
+>>>>>>> dev
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1651,6 +1669,7 @@
         },
         {
             "name": "laravel/pint",
+<<<<<<< HEAD
             "version": "v1.25.1",
             "version_normalized": "1.25.1.0",
             "source": {
@@ -1662,6 +1681,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/5016e263f95d97670d71b9a987bd8996ade6d8d9",
                 "reference": "5016e263f95d97670d71b9a987bd8996ade6d8d9",
+=======
+            "version": "v1.25.0",
+            "version_normalized": "1.25.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "595de38458c6b0ab4cae4bcc769c2e5c5d5b8e96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/595de38458c6b0ab4cae4bcc769c2e5c5d5b8e96",
+                "reference": "595de38458c6b0ab4cae4bcc769c2e5c5d5b8e96",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -1680,7 +1712,11 @@
                 "nunomaduro/termwind": "^2.3.1",
                 "pestphp/pest": "^2.36.0"
             },
+<<<<<<< HEAD
             "time": "2025-09-19T02:57:12+00:00",
+=======
+            "time": "2025-09-17T01:36:44+00:00",
+>>>>>>> dev
             "bin": [
                 "builds/pint"
             ],
@@ -1720,6 +1756,7 @@
         },
         {
             "name": "laravel/prompts",
+<<<<<<< HEAD
             "version": "v0.3.7",
             "version_normalized": "0.3.7.0",
             "source": {
@@ -1731,6 +1768,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/prompts/zipball/a1891d362714bc40c8d23b0b1d7090f022ea27cc",
                 "reference": "a1891d362714bc40c8d23b0b1d7090f022ea27cc",
+=======
+            "version": "v0.3.6",
+            "version_normalized": "0.3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/prompts.git",
+                "reference": "86a8b692e8661d0fb308cec64f3d176821323077"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/86a8b692e8661d0fb308cec64f3d176821323077",
+                "reference": "86a8b692e8661d0fb308cec64f3d176821323077",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -1747,13 +1797,22 @@
                 "illuminate/collections": "^10.0|^11.0|^12.0",
                 "mockery/mockery": "^1.5",
                 "pestphp/pest": "^2.3|^3.4",
+<<<<<<< HEAD
                 "phpstan/phpstan": "^1.12.28",
                 "phpstan/phpstan-mockery": "^1.1.3"
+=======
+                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan-mockery": "^1.1"
+>>>>>>> dev
             },
             "suggest": {
                 "ext-pcntl": "Required for the spinner to be animated."
             },
+<<<<<<< HEAD
             "time": "2025-09-19T13:47:56+00:00",
+=======
+            "time": "2025-07-07T14:17:42+00:00",
+>>>>>>> dev
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1776,12 +1835,17 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/laravel/prompts/tree/v0.3.7"
+=======
+                "source": "https://github.com/laravel/prompts/tree/v0.3.6"
+>>>>>>> dev
             },
             "install-path": "../laravel/prompts"
         },
         {
             "name": "laravel/sail",
+<<<<<<< HEAD
             "version": "v1.46.0",
             "version_normalized": "1.46.0.0",
             "source": {
@@ -1793,6 +1857,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/eb90c4f113c4a9637b8fdd16e24cfc64f2b0ae6e",
                 "reference": "eb90c4f113c4a9637b8fdd16e24cfc64f2b0ae6e",
+=======
+            "version": "v1.45.0",
+            "version_normalized": "1.45.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "019a2933ff4a9199f098d4259713f9bc266a874e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/019a2933ff4a9199f098d4259713f9bc266a874e",
+                "reference": "019a2933ff4a9199f098d4259713f9bc266a874e",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -1807,7 +1884,11 @@
                 "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
                 "phpstan/phpstan": "^1.10"
             },
+<<<<<<< HEAD
             "time": "2025-09-23T13:44:39+00:00",
+=======
+            "time": "2025-08-25T19:28:31+00:00",
+>>>>>>> dev
             "bin": [
                 "bin/sail"
             ],
@@ -1848,6 +1929,7 @@
         },
         {
             "name": "laravel/serializable-closure",
+<<<<<<< HEAD
             "version": "v2.0.5",
             "version_normalized": "2.0.5.0",
             "source": {
@@ -1859,6 +1941,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/3832547db6e0e2f8bb03d4093857b378c66eceed",
                 "reference": "3832547db6e0e2f8bb03d4093857b378c66eceed",
+=======
+            "version": "v2.0.4",
+            "version_normalized": "2.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/serializable-closure.git",
+                "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
+                "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -1871,7 +1966,11 @@
                 "phpstan/phpstan": "^2.0",
                 "symfony/var-dumper": "^6.2.0|^7.0.0"
             },
+<<<<<<< HEAD
             "time": "2025-09-22T17:29:40+00:00",
+=======
+            "time": "2025-03-19T13:51:03+00:00",
+>>>>>>> dev
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3450,6 +3549,7 @@
         },
         {
             "name": "phiki/phiki",
+<<<<<<< HEAD
             "version": "v2.0.4",
             "version_normalized": "2.0.4.0",
             "source": {
@@ -3461,6 +3561,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/phikiphp/phiki/zipball/160785c50c01077780ab217e5808f00ab8f05a13",
                 "reference": "160785c50c01077780ab217e5808f00ab8f05a13",
+=======
+            "version": "v2.0.2",
+            "version_normalized": "2.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phikiphp/phiki.git",
+                "reference": "6d735108238c03daaaef571448d8dee8187cab5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phikiphp/phiki/zipball/6d735108238c03daaaef571448d8dee8187cab5e",
+                "reference": "6d735108238c03daaaef571448d8dee8187cab5e",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -3478,7 +3591,11 @@
                 "phpstan/phpstan": "^2.0",
                 "symfony/var-dumper": "^7.1.6"
             },
+<<<<<<< HEAD
             "time": "2025-09-20T17:21:02+00:00",
+=======
+            "time": "2025-09-17T18:32:40+00:00",
+>>>>>>> dev
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3508,7 +3625,11 @@
             "description": "Syntax highlighting using TextMate grammars in PHP.",
             "support": {
                 "issues": "https://github.com/phikiphp/phiki/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/phikiphp/phiki/tree/v2.0.4"
+=======
+                "source": "https://github.com/phikiphp/phiki/tree/v2.0.2"
+>>>>>>> dev
             },
             "funding": [
                 {
@@ -3952,6 +4073,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "11.5.41",
             "version_normalized": "11.5.41.0",
             "source": {
@@ -3963,6 +4085,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b42782bcb947d2c197aea42ce9714ee2d974b283",
                 "reference": "b42782bcb947d2c197aea42ce9714ee2d974b283",
+=======
+            "version": "11.5.39",
+            "version_normalized": "11.5.39.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "ad5597f79d8489d2870073ac0bc0dd0ad1fa9931"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ad5597f79d8489d2870073ac0bc0dd0ad1fa9931",
+                "reference": "ad5597f79d8489d2870073ac0bc0dd0ad1fa9931",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -3986,7 +4121,11 @@
                 "sebastian/comparator": "^6.3.2",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.1",
+<<<<<<< HEAD
                 "sebastian/exporter": "^6.3.2",
+=======
+                "sebastian/exporter": "^6.3.0",
+>>>>>>> dev
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
                 "sebastian/type": "^5.1.3",
@@ -3996,7 +4135,11 @@
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
             },
+<<<<<<< HEAD
             "time": "2025-09-24T06:32:10+00:00",
+=======
+            "time": "2025-09-14T06:20:41+00:00",
+>>>>>>> dev
             "bin": [
                 "phpunit"
             ],
@@ -4036,7 +4179,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.41"
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.39"
+>>>>>>> dev
             },
             "funding": [
                 {
@@ -4500,6 +4647,7 @@
         },
         {
             "name": "psy/psysh",
+<<<<<<< HEAD
             "version": "v0.12.12",
             "version_normalized": "0.12.12.0",
             "source": {
@@ -4511,6 +4659,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/cd23863404a40ccfaf733e3af4db2b459837f7e7",
                 "reference": "cd23863404a40ccfaf733e3af4db2b459837f7e7",
+=======
+            "version": "v0.12.10",
+            "version_normalized": "0.12.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/psysh.git",
+                "reference": "6e80abe6f2257121f1eb9a4c55bf29d921025b22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/6e80abe6f2257121f1eb9a4c55bf29d921025b22",
+                "reference": "6e80abe6f2257121f1eb9a4c55bf29d921025b22",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -4532,7 +4693,11 @@
                 "ext-pdo-sqlite": "The doc command requires SQLite to work.",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
             },
+<<<<<<< HEAD
             "time": "2025-09-20T13:46:31+00:00",
+=======
+            "time": "2025-08-04T12:39:37+00:00",
+>>>>>>> dev
             "bin": [
                 "bin/psysh"
             ],
@@ -4575,7 +4740,11 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.12"
+=======
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.10"
+>>>>>>> dev
             },
             "install-path": "../psy/psysh"
         },
@@ -5272,6 +5441,7 @@
         },
         {
             "name": "sebastian/exporter",
+<<<<<<< HEAD
             "version": "6.3.2",
             "version_normalized": "6.3.2.0",
             "source": {
@@ -5283,6 +5453,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/70a298763b40b213ec087c51c739efcaa90bcd74",
                 "reference": "70a298763b40b213ec087c51c739efcaa90bcd74",
+=======
+            "version": "6.3.0",
+            "version_normalized": "6.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/exporter.git",
+                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/3473f61172093b2da7de1fb5782e1f24cc036dc3",
+                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3",
+>>>>>>> dev
                 "shasum": ""
             },
             "require": {
@@ -5293,11 +5476,19 @@
             "require-dev": {
                 "phpunit/phpunit": "^11.3"
             },
+<<<<<<< HEAD
             "time": "2025-09-24T06:12:51+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-main": "6.3-dev"
+=======
+            "time": "2024-12-05T09:17:50+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "6.1-dev"
+>>>>>>> dev
                 }
             },
             "installation-source": "dist",
@@ -5341,12 +5532,17 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.2"
+=======
+                "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.0"
+>>>>>>> dev
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -5359,6 +5555,8 @@
                 {
                     "url": "https://tidelift.com/funding/github/packagist/sebastian/exporter",
                     "type": "tidelift"
+=======
+>>>>>>> dev
                 }
             ],
             "install-path": "../sebastian/exporter"

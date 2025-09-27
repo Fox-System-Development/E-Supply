@@ -123,7 +123,11 @@ final class CodeCoverage
     }
 
     /**
+<<<<<<< HEAD
      * @phpstan-assert-if-true !null $this->codeCoverage
+=======
+     * @phpstan-assert-if-true !null $this->instance
+>>>>>>> dev
      */
     public function isActive(): bool
     {

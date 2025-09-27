@@ -112,11 +112,17 @@ class RedisTaggedCache extends TaggedCache
     {
         $this->event(new CacheFlushing($this->getName()));
 
+<<<<<<< HEAD
         $connection = $this->store->connection();
 
         $redisPrefix = match (true) {
             $connection instanceof PhpRedisConnection => $connection->client()->getOption(\Redis::OPT_PREFIX),
             $connection instanceof PredisConnection => $connection->client()->getOptions()->prefix,
+=======
+        $redisPrefix = match ($this->store->connection()::class) {
+            PhpRedisConnection::class => $this->store->connection()->client()->getOption(\Redis::OPT_PREFIX),
+            PredisConnection::class => $this->store->connection()->client()->getOptions()->prefix,
+>>>>>>> dev
         };
 
         $cachePrefix = $redisPrefix.$this->store->getPrefix();
@@ -145,13 +151,23 @@ class RedisTaggedCache extends TaggedCache
             end
         LUA;
 
+<<<<<<< HEAD
         $connection->eval(
+=======
+        $this->store->connection()->eval(
+>>>>>>> dev
             $script,
             count($keysToBeDeleted),
             ...$keysToBeDeleted,
             ...[$cachePrefix, ...$cacheTags]
         );
 
+<<<<<<< HEAD
+=======
+        // $this->flushValues();
+        // $this->tags->flush();
+
+>>>>>>> dev
         $this->event(new CacheFlushed($this->getName()));
 
         return true;

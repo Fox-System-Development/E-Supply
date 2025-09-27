@@ -560,9 +560,15 @@ if (! function_exists('logger')) {
      * Log a debug message to the logs.
      *
      * @param  string|null  $message
+<<<<<<< HEAD
      * @return ($message is null ? \Psr\Log\LoggerInterface : null)
      */
     function logger($message = null, array $context = []): ?LoggerInterface
+=======
+     * @return ($message is null ? \Illuminate\Log\LogManager : null)
+     */
+    function logger($message = null, array $context = []): ?LogManager
+>>>>>>> dev
     {
         if (is_null($message)) {
             return app('log');

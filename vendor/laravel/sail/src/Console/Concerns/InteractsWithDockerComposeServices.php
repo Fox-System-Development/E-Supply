@@ -8,6 +8,7 @@ use Symfony\Component\Yaml\Yaml;
 trait InteractsWithDockerComposeServices
 {
     /**
+<<<<<<< HEAD
      * Possible names for the compose file according to the spec.
      *
      * @var array<string>
@@ -20,6 +21,8 @@ trait InteractsWithDockerComposeServices
     ];
 
     /**
+=======
+>>>>>>> dev
      * The available services that may be installed.
      *
      * @var array<string>
@@ -74,11 +77,19 @@ trait InteractsWithDockerComposeServices
      */
     protected function buildDockerCompose(array $services)
     {
+<<<<<<< HEAD
         $composePath = $this->composePath();
 
         $compose = file_exists($composePath)
             ? Yaml::parseFile($composePath)
             : Yaml::parse(file_get_contents(__DIR__ . '/../../../stubs/compose.stub'));
+=======
+        $composePath = base_path('docker-compose.yml');
+
+        $compose = file_exists($composePath)
+            ? Yaml::parseFile($composePath)
+            : Yaml::parse(file_get_contents(__DIR__ . '/../../../stubs/docker-compose.stub'));
+>>>>>>> dev
 
         // Prepare the installation of the "mariadb-client" package if the MariaDB service is used...
         if (in_array('mariadb', $services)) {
@@ -96,7 +107,11 @@ trait InteractsWithDockerComposeServices
                 ->all();
         }
 
+<<<<<<< HEAD
         // Add the services to the compose.yaml...
+=======
+        // Add the services to the docker-compose.yml...
+>>>>>>> dev
         collect($services)
             ->filter(function ($service) use ($compose) {
                 return ! array_key_exists($service, $compose['services'] ?? []);
@@ -123,7 +138,11 @@ trait InteractsWithDockerComposeServices
 
         $yaml = str_replace('{{PHP_VERSION}}', $this->hasOption('php') ? $this->option('php') : '8.4', $yaml);
 
+<<<<<<< HEAD
         file_put_contents($composePath, $yaml);
+=======
+        file_put_contents($this->laravel->basePath('docker-compose.yml'), $yaml);
+>>>>>>> dev
     }
 
     /**
@@ -325,6 +344,7 @@ trait InteractsWithDockerComposeServices
             $this->output->write('    '.$line);
         });
     }
+<<<<<<< HEAD
 
     /**
      * Get the path to an existing Compose file or fall back to a default of `compose.yaml`.
@@ -337,4 +357,6 @@ trait InteractsWithDockerComposeServices
             ->map(fn ($path) => $this->laravel->basePath($path))
             ->first(fn ($path) => file_exists($path), $this->laravel->basePath('compose.yaml'));
     }
+=======
+>>>>>>> dev
 }
