@@ -1711,9 +1711,15 @@ class TestResponse implements ArrayAccess
                 "Session has unexpected key [{$key}]."
             );
         } elseif ($value instanceof Closure) {
+<<<<<<< HEAD
+            PHPUnit::withResponse($this)->assertFalse($value($this->session()->get($key)));
+        } else {
+            PHPUnit::withResponse($this)->assertNotEquals($value, $this->session()->get($key));
+=======
             PHPUnit::withResponse($this)->assertTrue($value($this->session()->get($key)));
         } else {
             PHPUnit::withResponse($this)->assertEquals($value, $this->session()->get($key));
+>>>>>>> dev
         }
 
         return $this;

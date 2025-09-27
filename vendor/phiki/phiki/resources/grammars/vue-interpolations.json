@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+{"$schema":"https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json","fileTypes":[],"injectTo":["source.vue","text.html.markdown","text.html.derivative","text.pug"],"injectionSelector":"L:text.pug -comment -string.comment, L:text.html.derivative -comment.block, L:text.html.markdown -comment.block","name":"vue-interpolations","patterns":[{"include":"source.vue#vue-interpolations"}],"scopeName":"vue.interpolations"}
+=======
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "fileTypes": [
@@ -17,3 +20,4 @@
   ],
   "scopeName": "vue.interpolations"
 }
+>>>>>>> dev

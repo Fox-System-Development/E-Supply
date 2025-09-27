@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+{"displayName":"TypeScript with Tags","name":"ts-tags","patterns":[{"include":"source.ts"}],"scopeName":"source.ts.tags"}
+=======
 {
   "displayName": "TypeScript with Tags",
   "name": "ts-tags",
@@ -8,3 +11,4 @@
   ],
   "scopeName": "source.ts.tags"
 }
+>>>>>>> dev

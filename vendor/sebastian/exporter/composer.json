@@ -58,7 +58,11 @@
     },
     "extra": {
         "branch-alias": {
+<<<<<<< HEAD
+            "dev-main": "6.3-dev"
+=======
             "dev-main": "6.1-dev"
+>>>>>>> dev
         }
     }
 }

@@ -430,6 +430,11 @@ trait InteractsWithIO
      */
     protected function parseVerbosity($level = null)
     {
+<<<<<<< HEAD
+        $level ??= '';
+
+=======
+>>>>>>> dev
         if (isset($this->verbosityMap[$level])) {
             $level = $this->verbosityMap[$level];
         } elseif (! is_int($level)) {
