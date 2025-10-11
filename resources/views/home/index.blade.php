@@ -1,39 +1,39 @@
 <x-app-layout>
     <x-slot name="header">        
         <h1 class="home-page-tittle">
-            {{ __('Menu de Gestão 
-                Simplificada.') }}
+            {{ __('Menu de Gestão Simplificada.') }}
         </h1>
     </x-slot>
             
-    <div class="bg-orange-middle-page">
-        <div class="main flex flex-row justify-between gap-8">
+    <div class="bg-orange-middle-page py-10">
+        <div class="main flex flex-row justify-center gap-8 px-4">
 
-                
-                <div class="ml-6 w-1/4 bg-white rounded-lg p-20 transaction-block shadow-lg mt-12">
-                    <img class ="add-sign-image"src="" alt="">
-                    <p class ="main-new-transaction-title">Nova Transação</p>
-                    <p class="main-new-transaction-sub-title">Registre uma nova despesa ou receita.                    
-                </div>
+            <div class="w-1/4 bg-white rounded-3xl p-20 shadow-2xl flex flex-col items-start gap-3 hover:bg-sky-700">
+                <img src="{{asset('images/plus.png')}}" alt="" class="h-15 w-14">
+                <p class="font-bold text-xl">Nova Transação</p>
+                <p class="text-lg text-gray-600">Registre uma nova despesa ou receita.</p>
+            </div>
 
-                <div class="w-1/4 bg-white rounded-lg p-20 extract-block shadow-lg mt-12">
-                    <img src="" alt="" class="clock-img">
-                    <p class="main-extract-title">Extrato</p>
-                    <p class="main-extract-sub-title">Acesse o histórico completo de suas movimentações.
-                </div>
+            <div class="w-1/4 bg-white rounded-3xl p-20 shadow-2xl flex flex-col items-start gap-3 ">
+                <img src="{{ asset('images/clock-image.png') }}" alt="Ícone de Relógio" class="h-15 w-14">
+                <p class="font-bold text-2xl">Extrato</p>
+                <p class="text-lg text-gray-600">Acesse o histórico completo de suas movimentações.</p>
+            </div>
 
-                <div class="w-1/4 bg-white rounded-lg p-20 edit-transaction-block shadow-lg mt-12">
-                    <img src="" alt="" class="edit-img">
-                    <p class="main-edit-transaction-title">Editar Transação</p>
-                    <p class="main-edit-transaction-sub-title">Edite informações de uma despesa ou receita já criada.             
-                </div>
+            <div class="w-1/4 bg-white rounded-3xl p-20 shadow-2xl flex flex-col items-start gap-3">
+                <img src="{{asset('images/edit-image.png')}}" alt="" class="h-15 w-14">
+                <p class="font-bold text-2xl">Editar Transação</p>
+                <p class="text-lg text-gray-600">Edite informações de uma despesa ou receita já criada.</p>
+            </div>
 
-                <div class="w-1/4 me-6 bg-white rounded-lg p-20 config-block shadow-lg mt-12">
-                    <img src="" alt="" class="config-img">
-                    <p class="main-home-congig-title bold">Configurações</p>
-                    <p class="main-home-congig-sub-title">Organize acessos, privilégios e ajustes do sistema</p>
-                </div>
-             </div>            
+            <div class="w-1/4 bg-white rounded-3xl p-20 shadow-2xl flex flex-col items-start gap-3">
+                <img src="{{asset('images/config-image.png')}}" alt="" class="h-15 w-14">
+                <p class="font-bold text-2xl">Configurações</p>
+                <p class="text-lg text-gray-600">Organize acessos, privilégios e ajustes do sistema</p>
+            </div>            
          </div>            
     </div>
+    <div class="items-center text-center">
+                <p class="text-gray-700 mt-20">© Todos os Direitos Reservados E-Supply 2025.</p>
+            </div>
 </x-app-layout>
