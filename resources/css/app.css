@@ -1,4 +1,5 @@
 @import './pages/transactions.css';
+@import './pages/home.css';
 
 @tailwind base;
 @tailwind components;

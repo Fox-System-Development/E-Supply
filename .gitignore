@@ -21,3 +21,5 @@ Homestead.yaml
 Thumbs.db
 /vendor
 /env
+.env
+/docker.zip
