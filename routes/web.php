@@ -8,6 +8,11 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
+Route::get('/settings', function(){
+    return view('settings.config');
+    
+})->middleware('auth', 'verified')->name('settings.config');
+
 Route::get('/home', function () {
     return view('home.index');
 })->middleware(['auth', 'verified'])->name('home');
