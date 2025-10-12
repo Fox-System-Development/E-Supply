@@ -11,7 +11,13 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Home') }}
+                        {{ __('Menu Inicial') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('transactions.index')" :active="request()->routeIs('transactions.index')">
+                        {{ __('Transações') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('settings.config')" :active="request()->routeIs('settings.config')">
+                        {{ __('Configurações') }}
                     </x-nav-link>
                 </div>
             </div>
