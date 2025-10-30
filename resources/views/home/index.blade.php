@@ -4,8 +4,9 @@
             {{ __('Menu de Gestão Simplificada.') }}
         </h1>
     </x-slot>
-            
+    
     <div class="bg-orange-middle-page py-10">
+        
         <div class="main flex flex-row justify-center gap-8 px-4">
  
             <a href="{{ route('transactions.create') }}"
@@ -41,4 +42,6 @@
     <div class="items-center text-center">
                 <p class="text-gray-700 mt-20">© Todos os Direitos Reservados E-Supply 2025.</p>
             </div>
+
+            
 </x-app-layout>
