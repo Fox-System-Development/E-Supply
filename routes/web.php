@@ -5,12 +5,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TransactionController; 
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/settings', function(){
+    return view('settings.config');
+    
+})->middleware('auth', 'verified')->name('settings.config');
+
+Route::get('/home', function () {
+    return view('home.index');
+})->middleware(['auth', 'verified'])->name('home');
+
+Route::get('/home', function () {
+    return view('home.index');
+})->middleware('auth')->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
