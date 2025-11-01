@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h1 class="extract-page-tittle">
             {{ __('Minhas Transações') }}
-        </h2>
+        </h1>
     </x-slot>
 
     <div class="py-12">
@@ -10,7 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-                    <a href="{{ route('transactions.create') }}" class="text-blue-500 hover:text-blue-700 font-bold">
+                    
+                    
+                    <a href="{{ route('transactions.create') }}" class=" bg-[#ECBC76] text-gray-600 font-bold rounded-3xl p-3 transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#EBDBBA] hover:border-#EB7E01 hover:shadow-xl hover:backdrop-blur-md">
                         Adicionar Nova Transação
                     </a>
 
