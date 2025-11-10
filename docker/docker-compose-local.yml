@@ -25,7 +25,7 @@ services:
     container_name: sistemafinanceiro-webserver
     tty: true
     ports:
-      - "8020:8080"
+      - "8030:8080"
       - "447:443"
     volumes:
       - ../:/var/www/app
