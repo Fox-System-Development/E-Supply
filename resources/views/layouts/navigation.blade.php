@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 shadow-lg rounded-b-xl">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -8,18 +8,8 @@
                     <img src="{{ asset('images/logo-e-supply.png') }}" alt="Logo do Sistema  Financeiro" class="block h-21 w-20">
                     </a>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Menu Inicial') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('transactions.index')" :active="request()->routeIs('transactions.index')">
-                        {{ __('Transações') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('settings.config')" :active="request()->routeIs('settings.config')">
-                        {{ __('Configurações') }}
-                    </x-nav-link>
-                </div>
+                <!-- Spacing -->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"></div>
             </div>
 
             <!-- Settings Dropdown -->
