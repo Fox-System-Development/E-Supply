@@ -1,38 +1,52 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h1 class="config-page-tittle">
-            {{ __('Configurações') }}
+
+    <!-- Container principal -->
+    <div class="min-h-screen bg-gradient-to-br from-orange-300 to-orange-500 py-20">
+
+    <!-- Título -->
+    <div class="text-center pb-8">
+        <h1 class="text-4xl font-bold text-gray-900 drop-shadow-md">
+            Configurações
         </h1>
-    </x-slot>
+    </div>
 
+        <!-- Card -->
+        <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-2xl p-10">
 
-        <div class="w-full pl-[270px] pr-[270px]">
+            <!-- PRIVACIDADE -->
+            <a href="{{ asset('files/lorem-ipsum.pdf') }}" target="_blank"
+               class="flex items-center justify-center gap-3 w-full bg-white border border-orange-300 
+                      rounded-2xl p-4 mb-6 shadow-md hover:shadow-xl hover:bg-orange-50 
+                      transition-all duration-300 text-gray-800 font-semibold">
+                <img src="{{ asset('images/lock.png') }}" class="h-6 w-6" alt="">
+                Privacidade
+            </a>
 
-            <div class="w-full bg-white rounded-[2vw] shadow-2xl mt-[150px] px-8 py-[80px]">
-            
-                <a href="{{ asset('files/lorem-ipsum.pdf') }}" target="_blanlk"
-                class="bg-[#ECBC76] rounded-3xl mb-6 p-2 shadow-2xl flex items-center justify-center gap-3 transform transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[#ECBC76]/40 hover:border-white/40 hover:shadow-xl hover:backdrop-blur-md text-center">
-                    <img src="{{ asset('images/lock.png') }}" alt="" class="h-6 w-6">
-                    <p class= "font-bold text-1xl text-gray-800 p-2">Privacidade</p>
-                </a>
-                
-                <a href="https://wa.me/5531999999999?text=Gostaria%20de%20abrir%20um%20chamado!" target="_blank"
-                class="bg-[#ECBC76] rounded-3xl mb-6 p-2 shadow-2xl flex items-center justify-center gap-3 transform transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[#ECBC76]/40 hover:border-white/40 hover:shadow-xl hover:backdrop-blur-md text-center">
-                    <img src="{{ asset('images/suporte.png') }}" alt="" class="h-6 w-6">
-                    <p class= "font-bold text-1xl text-gray-800 p-2">Suporte</p>
-                </a>
-                
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
+            <!-- SUPORTE -->
+            <a href="https://wa.me/5531999999999?text=Gostaria%20de%20abrir%20um%20chamado!"
+               target="_blank"
+               class="flex items-center justify-center gap-3 w-full bg-white border border-orange-300 
+                      rounded-2xl p-4 mb-6 shadow-md hover:shadow-xl hover:bg-orange-50 
+                      transition-all duration-300 text-gray-800 font-semibold">
+                <img src="{{ asset('images/suporte.png') }}" class="h-6 w-6" alt="">
+                Suporte
+            </a>
 
-                    <a href="{{ route('logout') }}"
-                    onclick="event.preventDefault(); this.closest('form').submit();"
-                    class="bg-[#ECBC76] rounded-3xl  p-4 shadow-2xl flex items-center justify-center gap-3 transform transition-all duration-300 ease-in-out hover:scale-[1.03] hover:bg-[#ECBC76]/40 hover:border-white/40 hover:shadow-xl hover:backdrop-blur-md text-center">
-                            <img src="{{ asset('images/done.png') }}" alt="" class="h-6 w-6">             
-                            <p class="font-bold text-1xl text-gray-800">Encerrar Sessão</p>
-                    </a>
-                </form>
+            <!-- LOGOUT -->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
 
-            </div>
+                <button type="submit"
+                        class="flex items-center justify-center gap-3 w-full bg-white border border-orange-300 
+                               rounded-2xl p-4 shadow-md hover:shadow-xl hover:bg-orange-50 
+                               transition-all duration-300 text-gray-800 font-semibold">
+
+                    <img src="{{ asset('images/done.png') }}" class="h-6 w-6" alt="">
+                    Encerrar Sessão
+                </button>
+            </form>
+
         </div>
+    </div>
+
 </x-app-layout>
