@@ -1,0 +1,21 @@
+includes:
+    - vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Nível de rigor da análise
+    # 0 é o mais básico (só erros críticos)
+    # 5 é o recomendado para começar (encontra bugs lógicos)
+    # 9 é o modo "hardcore" (exige tipagem perfeita em tudo)
+    level: 5
+
+    # (Opcional) Ignorar erros específicos no futuro
+    # ignoreErrors:
+    #     - '#PHPDoc tag @var#'
+    
+    # (Opcional) Excluir pastas específicas
+    # excludePaths:
+    #     - ./*/*/FileToBeExcluded.php
