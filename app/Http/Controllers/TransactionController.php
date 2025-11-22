@@ -10,13 +10,32 @@ class TransactionController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-    // 1. Coleta apenas as transações do utilizador autenticado
-        $transactions = auth()->user()->transactions()->get();
+        //dd($request);
+        $query = auth()->user()->transactions();
+
+        if ($request->filled('search')){
+
+            $termo = $request->search;
+
+                $query->where(function($q) use ($termo){
+                $q->where('description', 'like', '%' . $termo . '%')
+                ->orWhere('date', 'like', '%' . $termo . '%')
+                ->orWhere('type', 'like', '%' . $termo . '%');
+            });
+        }
+
+        $transactions = $query->get();
+
+        $totalReceitas = $transactions->where('type', 'receita')->sum('amount');
+
+        $totalDespesas = $transactions->where('type', 'despesa')->sum('amount');
+
+        $saldo = $totalReceitas - $totalDespesas; 
 
     // 2. Envia a lista de transações para a view 'index'
-    return view('transactions.index', compact('transactions'));
+    return view('transactions.index', compact('transactions', 'totalReceitas', 'totalDespesas', 'saldo'));
     }
 
     /**
