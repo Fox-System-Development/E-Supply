@@ -1,27 +1,5 @@
 <nav x-data="{ open: false }" class="bg-white shadow-xl rounded-b-2xl border-b border-gray-200">
     <!-- Primary Navigation Menu -->
-<<<<<<< HEAD
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <a href="{{ route('home') }}">
-                    <img src="{{ asset('images/logo-e-supply.png') }}" alt="Logo do Sistema  Financeiro" class="block h-21 w-20">
-                    </a>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Menu Inicial') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('transactions.index')" :active="request()->routeIs('transactions.index')">
-                        {{ __('Transações') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('settings.config')" :active="request()->routeIs('settings.config')">
-                        {{ __('Configurações') }}
-                    </x-nav-link>
-                </div>
-=======
     <div class="max-w-7xl mx-auto px-6 sm:px-8">
         <div class="flex justify-between h-16 items-center">
 
@@ -30,7 +8,6 @@
                 <a href="{{ route('home') }}" class="flex items-center hover:opacity-90 transition">
                     <img src="{{ asset('images/logo-e-supply.png') }}" alt="Logo" class="block h-21 w-20">
                 </a>
->>>>>>> TL-10/Integrar-chat-bot-no-backend
             </div>
 
             <!-- Desktop Menu + Dropdown -->
@@ -98,13 +75,6 @@
         </div>
     </div>
 
-<<<<<<< HEAD
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                {{ __('Home') }}
-=======
     <!-- Mobile Menu -->
     <div :class="{ 'block': open, 'hidden': ! open }" class="hidden sm:hidden bg-white border-t border-gray-200">
         
@@ -112,7 +82,6 @@
         <div class="py-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 Home
->>>>>>> TL-10/Integrar-chat-bot-no-backend
             </x-responsive-nav-link>
         </div>
 
