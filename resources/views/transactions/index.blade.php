@@ -107,7 +107,7 @@
                                 <td class="px-6 py-4 text-sm font-medium">
                                     <a href="{{ route('transactions.edit', $transaction) }}"
                                         class="text-blue-600 hover:text-blue-900">
-                                        <x-primary-button>Salvar</x-primary-button>
+                                        <x-primary-button>Editar</x-primary-button>
                                     </a>
 
                                     <form action="{{ route('transactions.destroy', $transaction) }}"
