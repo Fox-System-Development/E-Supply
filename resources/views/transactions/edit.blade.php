@@ -12,11 +12,13 @@
     <!-- CARD -->
     <div class="relative bg-white w-[780px] rounded-2xl shadow-xl p-12">
 
+    
         <!-- Título com ícone ao lado -->
         <div class="flex items-center gap-4 mb-10">
             <img src="{{ asset('images/home.png') }}" 
                  alt="Logo"
-                 class="w-12 h-12 object-contain" />
+                 class="w-12 h-12 object-contain" 
+                 href= {{ route('home.index') }}/>
 
             <h1 class="text-3xl font-bold text-black">Editar Transação</h1>
         </div>

@@ -1,9 +1,9 @@
 <x-app-layout>
-    <!-- Página inteira com gradiente laranja -->
-    <div class="relative min-h-screen min-w-screen bg-gradient-to-br from-orange-300 to-orange-500 py-16">
+    
+    <div class="relative min-h-screen min-w-screen bg-gradient-to-br from-orange-300 to-orange-500 py-20">
 
         <div>
-            <p class="font-bold text-center text-gray-900 py-12 text-5xl">Menu de Gestão Simplificado</p>
+            <p class="font-bold text-center text-gray-700 py-12 text-5xl">Menu de Gestão Simplificado</p>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-8">
