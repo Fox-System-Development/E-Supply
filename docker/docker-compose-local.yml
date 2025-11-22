@@ -19,6 +19,17 @@ services:
     networks:
       - app-network
 
+      # Serviço de IA Local
+  ollama:
+    image: ollama/ollama:latest
+    container_name: sistemafinanceiro-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - app-network
+
   #Nginx Service
   webserver:
     image: nginx:alpine
@@ -68,4 +79,6 @@ networks:
 #Volumes
 volumes:
   dbdata:
+    driver: local
+  ollama_data: # <--- ADICIONE ISSO
     driver: local
