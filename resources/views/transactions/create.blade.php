@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Transação</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
 </head>
 
 <body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-300 to-orange-500">
 
     <!-- CARD -->
     <div class="relative bg-white w-[780px] rounded-2xl shadow-xl p-12  transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-orange-50 hover:border-orange-300 hover:shadow-2xl"" >
-        <a href="{{ route('home') }}"
-        <!-- Título com ícone ao lado -->
+
+    
+    <!-- Título com ícone ao lado -->    
         <div class="flex items-center gap-4 mb-10">
-            <img src="{{ asset('images/home.png') }}" 
-                 alt="Logo" 
-                 class="w-12 h-12 object-contain transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-orange-50 hover:border-orange-300 hover:shadow-2xl" />
-        </a>
-            
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/home.png') }}" 
+                    alt="Logo" 
+                    class="w-12 h-12 object-contain transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-orange-50 hover:border-orange-300 hover:shadow-2xl" />
+            </a>
             <h1 class="text-3xl font-bold text-black">Adicionar nova Transação</h1>
         </div>
 
