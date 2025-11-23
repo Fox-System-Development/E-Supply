@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Transação</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
 </head>
 
 <body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-300 to-orange-500">
