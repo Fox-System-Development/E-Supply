@@ -1,9 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Configurações') }}
-        </h2>
-    </x-slot>
 
     <!-- Container principal -->
     <div class="min-h-screen bg-gradient-to-br from-orange-300 to-orange-500 py-20">
@@ -54,6 +49,4 @@
         </div>
     </div>
 
-</x-app-layout>
-=======
 </x-app-layout>
