@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TransactionController; 
+use App\Http\Controllers\ChatController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -30,3 +31,4 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::resource('transactions', TransactionController::class)->middleware('auth');
+Route::post('/chat/send', [ChatController::class, 'sendMessage'])->name('chat.send');
