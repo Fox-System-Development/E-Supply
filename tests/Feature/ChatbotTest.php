@@ -20,11 +20,7 @@ class ChatbotTest extends TestCase
                     [
                         'content' => [
                             'parts' => [
-<<<<<<< HEAD
-                                ['text' => 'Olá. Sou o usuário simulado!'],
-=======
                                 ['text' => 'Olá! Sou o usuário simulado.'],
->>>>>>> dev
                             ],
                         ],
                     ],

@@ -12,17 +12,17 @@ class TransactionController extends Controller
      */
     public function index(Request $request)
     {
-        //dd($request);
+        // dd($request);
         $query = auth()->user()->transactions();
 
-        if ($request->filled('search')){
+        if ($request->filled('search')) {
 
             $termo = $request->search;
 
-                $query->where(function($q) use ($termo){
-                $q->where('description', 'like', '%' . $termo . '%')
-                ->orWhere('date', 'like', '%' . $termo . '%')
-                ->orWhere('type', 'like', '%' . $termo . '%');
+            $query->where(function ($q) use ($termo) {
+                $q->where('description', 'like', '%'.$termo.'%')
+                    ->orWhere('date', 'like', '%'.$termo.'%')
+                    ->orWhere('type', 'like', '%'.$termo.'%');
             });
         }
 
@@ -32,19 +32,19 @@ class TransactionController extends Controller
 
         $totalDespesas = $transactions->where('type', 'despesa')->sum('amount');
 
-        $saldo = $totalReceitas - $totalDespesas; 
+        $saldo = $totalReceitas - $totalDespesas;
 
-    // 2. Envia a lista de transações para a view 'index'
-    return view('transactions.index', compact('transactions', 'totalReceitas', 'totalDespesas', 'saldo'));
+        // 2. Envia a lista de transações para a view 'index'
+        return view('transactions.index', compact('transactions', 'totalReceitas', 'totalDespesas', 'saldo'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
-{
-    return view('transactions.create');
-}
+    {
+        return view('transactions.create');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -52,22 +52,22 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-        'description' => 'required|string|max:255',
-        'amount' => 'required|numeric',
-        'type' => 'required|in:receita,despesa',
-        'date' => 'required|date',
-        'justificativa' => 'reequired|string', // nullable significa que é opcional
-    ]);
+            'description' => 'required|string|max:255',
+            'amount' => 'required|numeric',
+            'type' => 'required|in:receita,despesa',
+            'date' => 'required|date',
+            'justificativa' => 'reequired|string', // nullable significa que é opcional
+        ]);
 
-    // Passo 2: Adicionar o "Dono" da transação 👤
-    $validatedData['user_id'] = auth()->id(); // Pega o ID do utilizador autenticado
+        // Passo 2: Adicionar o "Dono" da transação 👤
+        $validatedData['user_id'] = auth()->id(); // Pega o ID do utilizador autenticado
 
-    // Passo 3: Salvar no Banco de Dados 💾
-    Transaction::create($validatedData);
+        // Passo 3: Salvar no Banco de Dados 💾
+        Transaction::create($validatedData);
 
-    // Redireciona o utilizador de volta para uma página com uma mensagem de sucesso
-    return redirect()->route('transactions.index')
-        ->with('success', 'Transação salva com sucesso!');
+        // Redireciona o utilizador de volta para uma página com uma mensagem de sucesso
+        return redirect()->route('transactions.index')
+            ->with('success', 'Transação salva com sucesso!');
     }
 
     /**
@@ -92,16 +92,16 @@ class TransactionController extends Controller
     public function update(Request $request, Transaction $transaction)
     {
         $validatedData = $request->validate([
-        'description' => 'required|string|max:255',
-        'amount' => 'required|numeric',
-        'type' => 'required|in:receita,despesa',
-        'date' => 'required|date',
-        'justificativa' => 'nullable|string',
-    ]);
+            'description' => 'required|string|max:255',
+            'amount' => 'required|numeric',
+            'type' => 'required|in:receita,despesa',
+            'date' => 'required|date',
+            'justificativa' => 'nullable|string',
+        ]);
 
-    $transaction->update($validatedData);
+        $transaction->update($validatedData);
 
-    return redirect()->route('transactions.index')->with('succes', 'Transação Atualizada com Sucesso!');
+        return redirect()->route('transactions.index')->with('succes', 'Transação Atualizada com Sucesso!');
     }
 
     /**

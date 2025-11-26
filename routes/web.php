@@ -1,17 +1,17 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TransactionController; 
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransactionController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('/settings', function(){
+Route::get('/settings', function () {
     return view('settings.config');
-    
+
 })->middleware('auth', 'verified')->name('settings.config');
 
 Route::get('/home', function () {

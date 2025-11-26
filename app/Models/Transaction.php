@@ -11,8 +11,6 @@ class Transaction extends Model
 
     /**
      * The attributes that are mass assignable.
-     *
-     * 
      */
     protected $fillable = [
         'user_id',
@@ -22,7 +20,4 @@ class Transaction extends Model
         'date',
         'justificativa',
     ];
-
-  
 }
-    

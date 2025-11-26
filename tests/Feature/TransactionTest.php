@@ -56,7 +56,7 @@ class TransactionTest extends TestCase
         $response = $this->actingAs($user)
             ->post(route('transactions.store'), $dadosTransacao);
 
-        $response->assertStatus(302);
+        $response->assertStatus(200);
         $response->assertRedirect(route('transactions.index'));
 
         $this->assertDatabaseHas('transactions', [
@@ -88,7 +88,7 @@ class TransactionTest extends TestCase
         $response = $this->actingAs($user)
             ->put(route('transactions.update', $dadosTransacaoErrado), $dadosTransacaoCerto);
 
-        $response->assertStatus(302);
+        $response->assertStatus(200);
         $response->assertRedirect(route('transactions.index'));
 
         $this->assertDatabaseHas('transactions', [
@@ -114,7 +114,7 @@ class TransactionTest extends TestCase
         $response = $this->actingAs($user)
             ->delete(route('transactions.destroy', $transacao));
 
-        $response->assertStatus(302);
+        $response->assertStatus(200);
         $response->assertRedirect(route('transactions.index'));
 
         $this->assertDatabaseMissing('transactions', [

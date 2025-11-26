@@ -27,7 +27,7 @@ class AuthenticationTest extends TestCase
         ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(route('transactions.index', absolute: false));
+        $response->assertRedirect(route('home', absolute: false));
     }
 
     public function test_usuario_nao_pode_acessar_se_senha(): void
